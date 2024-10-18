@@ -3,9 +3,13 @@ import { useState } from "react";
 import type { Character, House } from "../api/types.api";
 import { Button } from "./base/button";
 import { Dialog } from "./base/dialog";
-import { useGetHouseMembers } from "../api/use-get-house-members";
+import { useGetHouseMembers } from "../api/hooks";
 
-export const HouseCard = ({ house }: { house: House }) => {
+type HouseCardProps = {
+  house: House;
+};
+
+export const HouseCard = ({ house }: HouseCardProps) => {
   const [showDialog, setShowDialog] = useState(false);
 
   const handleToggleDialog = () => {
@@ -48,7 +52,7 @@ const HouseCardDialog = ({
   return (
     <Dialog onClose={onToggleDialog} open={showDialog}>
       <div className="p-6 bg-white rounded-lg relative">
-        <h2 className="text-2xl font-bold mb-4 max-w-lg">
+        <h2 className="text-2xl font-bold mb-4 max-w-sm">
           {house.name} Members
         </h2>
         <MemberCounts data={data} />

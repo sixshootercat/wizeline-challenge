@@ -27,9 +27,23 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to access 
 
 ## Project Structure
 
+The project is structured as follows:
+
+- `/app`: This is the Next.js app router folder. It contains the main application code, including pages, components, and API requests.
+- `/app/api`: This folder contains the API requests and types for the application.
+- `/app/components`: This folder contains reusable components for the application.
+- `/app/utils`: This folder contains utility functions for the application.
+
 ## Tools Used
 
 - Next.js App Router
 - React Query: For managing async state and caching. This is a great tool for optimizing data fetching and caching.
 - Tailwind CSS: CSS framework for styling inline using utility classes. Easy to customize and fast for prototyping.
 - TypeScript: for static type checking. Helps catch errors early and improves code quality.
+
+## Follow Up Improvements
+
+- Add components tests
+- Improve error handling and user feedback
+- Improve documentation
+- Handle suspense fallback on search param changes
