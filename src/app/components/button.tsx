@@ -1,20 +1,10 @@
 "use client";
-import type {
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
-  JSXElementConstructor,
-} from "react";
+import type { ButtonHTMLAttributes } from "react";
 import { cn } from "../utils/styles";
 
-export type ButtonProps = DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: JSXElementConstructor<ButtonProps> = ({
-  children,
-  ...props
-}: ButtonProps) => {
+export const Button = ({ children, ...props }: ButtonProps) => {
   return (
     <button
       className={cn(
