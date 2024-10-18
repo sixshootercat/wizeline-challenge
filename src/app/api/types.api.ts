@@ -1,3 +1,4 @@
+// On larger codebases, I would normally split API types into separate files for each resource/entity
 export interface House {
   url: string;
   name: string;

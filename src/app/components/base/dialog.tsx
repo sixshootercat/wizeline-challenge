@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "../utils/styles";
+import { cn } from "@/app/utils/styles";
 
 type DialogProps = {
   open: boolean;

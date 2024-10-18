@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import type { Character, House } from "../api/types.api";
-import { Button } from "./button";
-import { Dialog } from "./dialog";
+import { Button } from "./base/button";
+import { Dialog } from "./base/dialog";
 import { useGetHouseMembers } from "../api/use-get-house-members";
 
 export const HouseCard = ({ house }: { house: House }) => {

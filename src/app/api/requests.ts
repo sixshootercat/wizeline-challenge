@@ -1,8 +1,14 @@
 import type { Character, HousesResponse, PaginationLinks } from "./types.api";
 
+// this would typically go in a config file or env for multiple environments
+const API_BASE_URL = "https://anapioficeandfire.com/api";
+
+/**
+ * supports paginatation with page size of 10
+ */
 export const getAllHouses = async ({ page = 1 }): Promise<HousesResponse> => {
   const response = await fetch(
-    `https://anapioficeandfire.com/api/houses?page=${page}&pageSize=10`
+    `${API_BASE_URL}/houses?page=${page}&pageSize=10`
   );
 
   if (!response.ok) {
@@ -33,9 +39,7 @@ export const getCharacterById = async ({
 }: {
   id: string;
 }): Promise<HousesResponse> => {
-  const response = await fetch(
-    `https://anapioficeandfire.com/api/characters/${id}`
-  );
+  const response = await fetch(`${API_BASE_URL}/characters/${id}`);
   if (!response.ok) {
     throw new Error("Failed to fetch character");
   }

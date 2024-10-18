@@ -1,6 +1,6 @@
 "use client";
+import { cn } from "@/app/utils/styles";
 import type { ButtonHTMLAttributes } from "react";
-import { cn } from "../utils/styles";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 

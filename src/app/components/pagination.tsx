@@ -1,6 +1,6 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
-import Button from "./button";
+import Button from "./base/button";
 import type { PaginationLinks } from "../api/types.api";
 
 export const Pagination = ({ pagination }: { pagination: PaginationLinks }) => {
