@@ -2,13 +2,13 @@
 
 import { cn } from "../utils/styles";
 
-interface DialogProps {
+type DialogProps = {
   open: boolean;
   onClose: () => void;
   children: React.ReactNode;
-}
+};
 
-const Dialog: React.FC<DialogProps> = ({ open, onClose, children }) => {
+export const Dialog = ({ open, onClose, children }: DialogProps) => {
   return (
     <div
       className={cn(
@@ -41,5 +41,3 @@ const Dialog: React.FC<DialogProps> = ({ open, onClose, children }) => {
     </div>
   );
 };
-
-export default Dialog;
