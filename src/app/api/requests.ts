@@ -34,6 +34,18 @@ export const getAllHouses = async ({ page = 1 }): Promise<HousesResponse> => {
   return { data, pagination };
 };
 
+export const getCharacterByName = async (name: string): Promise<Character> => {
+  const response = await fetch(`${API_BASE_URL}/characters?name=${name}`);
+  if (!response.ok) {
+    throw new Error("Failed to fetch character");
+  }
+  const data = await response.json();
+  if (!data.length) {
+    throw new Error("No character found");
+  }
+  return data[0];
+};
+
 export const getCharacterById = async ({
   id,
 }: {

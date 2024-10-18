@@ -45,6 +45,7 @@ export const useCharacterSearch = (name: string) => {
     queryKey: ["character", name],
     queryFn: () => getCharacterByName(name),
     enabled: !!name,
+    retry: false,
   });
 
   return { data, isLoading, error };

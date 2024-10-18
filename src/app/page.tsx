@@ -1,4 +1,5 @@
 import { getAllHouses } from "./api/requests";
+import { CharacterSearch } from "./components/character-search";
 import { HousesList } from "./components/houses-list";
 import { Pagination } from "./components/pagination";
 
@@ -12,10 +13,13 @@ export default async function HomePage({
   });
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <h1 className="text-4xl font-bold text-center">Dead or Alive?</h1>
-      <HousesList houses={houses} />
-      <Pagination pagination={pagination} />
-    </div>
+    <>
+      <CharacterSearch />
+      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+        <h1 className="text-4xl font-bold text-center">Dead or Alive?</h1>
+        <HousesList houses={houses} />
+        <Pagination pagination={pagination} />
+      </div>
+    </>
   );
 }
