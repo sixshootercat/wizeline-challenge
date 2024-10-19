@@ -37,13 +37,14 @@ The project is structured as follows:
 ## Tools Used
 
 - Next.js App Router
-- React Query: For managing async state and caching. This is a great tool for optimizing data fetching and caching.
+- Tanstack Query: For managing async state and caching. This is a great tool for optimizing data fetching and caching.
 - Tailwind CSS: CSS framework for styling inline using utility classes. Easy to customize and fast for prototyping.
 - TypeScript: for static type checking. Helps catch errors early and improves code quality.
 
 ## Follow Up Improvements
 
-- Add components tests
+- Write components tests
 - Improve error handling and user feedback
 - Improve documentation
 - Handle suspense fallback on search param changes
+- Work on mobile responsiveness

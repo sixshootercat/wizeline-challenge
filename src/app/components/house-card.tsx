@@ -19,7 +19,7 @@ export const HouseCard = ({ house }: HouseCardProps) => {
   return (
     <div
       key={house.url}
-      className="p-4 border border-gray-200 rounded-lg shadow-md flex flex-col justify-between"
+      className="p-4 border border-gray-200 rounded-lg shadow-md flex flex-col justify-between w-full h-full"
     >
       <h2 className="text-xl font-bold my-4">{house.name}</h2>
       <Button type="button" onClick={() => setShowDialog(true)}>
@@ -51,11 +51,11 @@ const HouseCardDialog = ({
 
   return (
     <Dialog onClose={onToggleDialog} open={showDialog}>
-      <div className="p-6 bg-white rounded-lg relative">
+      <div className="bg-white rounded-lg">
+        <MemberCounts data={data} />
         <h2 className="text-2xl font-bold mb-4 max-w-sm">
           {house.name} Members
         </h2>
-        <MemberCounts data={data} />
         <LoadingState isLoading={isLoading} />
         <ErrorState error={error} />
         <EmptyState isLoading={isLoading} data={data} />
@@ -72,7 +72,7 @@ const MemberCounts = ({ data }: { data: Character[] | undefined }) => {
   const aliveCount = data.filter((member) => !member.died).length;
 
   return (
-    <div className="absolute flex gap-1 top-5 right-12 text-sm text-white">
+    <div className="flex gap-1 text-sm text-white mb-4">
       <div className="border border-red-200 rounded-full px-2 py-1 bg-red-400">
         Dead: {deadCount}
       </div>

@@ -21,7 +21,11 @@ export const HousesList = ({ houses }: { houses: House[] }) => {
   return (
     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {houses.map((house) => {
-        return <HouseCard house={house} key={house.url} />;
+        return (
+          <div key={house.url} className="w-full">
+            <HouseCard house={house} />
+          </div>
+        );
       })}
     </div>
   );

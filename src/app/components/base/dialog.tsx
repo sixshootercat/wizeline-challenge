@@ -16,7 +16,7 @@ export const Dialog = ({ open, onClose, children }: DialogProps) => {
         { hidden: !open }
       )}
     >
-      <div className="relative bg-white rounded-lg shadow-lg max-w-[70%] p-6 min-w-[70%] min-h-96 max-h-96 overflow-scroll">
+      <div className="relative bg-white rounded-lg shadow-lg sm:max-w-[70%] p-6 sm:min-w-[70%] sm:min-h-96 sm:max-h-96 overflow-scroll max-w-full max-h-full w-full h-full">
         <button
           type="button"
           className="absolute top-3 right-3 z-50"
